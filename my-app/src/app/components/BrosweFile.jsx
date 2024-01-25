@@ -10,6 +10,7 @@ export const BrosweFile = () => {
   // State to store table Column name
   const [tableRows, setTableRows] = useState([]);
 
+  const [clickUpload,setClickUpload]  = useState(false)
   // State to store the values
   const [values, setValues] = useState([]);
 
@@ -75,9 +76,15 @@ export const BrosweFile = () => {
   console.log("parse", parsedData);
 
   const handlermoveseleted = () => {
-    setSelectedFileName(" ");
+    setSelectedFileName("");
     setSelectedArray([])
+    setValues([])
+    setTableRows([])
   };
+
+  const handleUpload = () => {
+    setClickUpload(true)
+  }
 
   return (
     <>
@@ -124,7 +131,7 @@ export const BrosweFile = () => {
               {selectedFileName && (
                 <p
                   onClick={handlermoveseleted}
-                  className=" mt-2 text-red-500 text-sm text-center"
+                  className=" mt-2 cursor-pointer text-red-500 text-sm text-center"
                 >
                   remove
                 </p>
@@ -151,6 +158,7 @@ export const BrosweFile = () => {
             </div>
 
             <button
+            onClick={handleUpload}
               className="bg-[#605BFF] py-2 w-[100%] rounded mt-5 flex items-center 
                   justify-center gap-5 text-sm text-[#FFFFFF]
                 m-auto"
@@ -166,8 +174,9 @@ export const BrosweFile = () => {
 
       <div className="relative top-40 overflow-x-auto">
         <h2 className="text-2xl py-4 px-2 font-semibold"> Uploads </h2>
-
-        <table className="w-full border-separate border-spacing-x-0 border-spacing-y-[15px] px-4 py-2 rounded-lg bg-[#F5F5F5] border-red-600">
+            {
+              clickUpload && 
+              <table className="w-full border-separate border-spacing-x-0 border-spacing-y-[15px] px-4 py-2 rounded-lg bg-[#F5F5F5] border-red-600">
           <thead>
             <tr>
               {tableRows.map((rows, index) => (
@@ -242,6 +251,8 @@ export const BrosweFile = () => {
             ))}
           </tbody>
         </table>
+            }
+        
       </div>
     </>
   );
