@@ -1,26 +1,24 @@
 import Image from "next/image";
 import React from "react";
-import {
-  IoMdNotificationsOutline,
-} from "react-icons/io";
+import { IoMdNotificationsOutline } from "react-icons/io";
 import Sidebar from "../../components/Sidebar";
 import MobileNavbar from "@/app/components/MobileNavbar";
-import {BrosweFile} from "@/app/components/BrosweFile"
-
+import { BrosweFile } from "@/app/components/BrosweFile";
 
 const page = () => {
   return (
-
+    <div className="Box-container  w-[100%] m-auto flex justify-between border-yellow-600">
       <div
-        className="flex  w-[100%] justify-between gap-5
-       m-auto border-red-600 h-screen "
+        className="SideBar-container hidden sm:block  py-2 px-2 w-[20%] 
+     min-h-screen fixed  m-auto shadow-md text-[#9A9AA9] h-screen lg:px-4 "
       >
         <Sidebar />
+      </div>
+      <MobileNavbar />
 
-        <MobileNavbar />
-
+      <div className="Admin-container sm:ml-[20%]  border-pink-700 w-[80%]  m-auto  min-h-screen">
         <div
-          className="RightSide-Container
+          className="RightSide-Container 
          border-black w-full px-4 mx-auto    p-2"
         >
           <div
@@ -48,13 +46,12 @@ const page = () => {
                 </div>
               </span>
             </div>
-          </div>         
+          </div>
 
-          <BrosweFile/>
-            
+          <BrosweFile />
         </div>
       </div>
-
+    </div>
   );
 };
 
