@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Papa from "papaparse";
 import { FiUpload } from "react-icons/fi";
 import "./a.css"
 export const BrosweFile = () => {
+  const fileInputRef = useRef(null);
+  const fileInputRef1 = useRef(null);
   const [parsedData, setParsedData] = useState([]);
   const [selectedFileName, setSelectedFileName] = useState("");
   // State to store table Column name
@@ -80,6 +82,13 @@ export const BrosweFile = () => {
     setSelectedArray([])
     setValues([])
     setTableRows([])
+    setClickUpload(false)
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+    if (fileInputRef1.current) {
+      fileInputRef1.current.value = "";
+    }
   };
 
   const handleUpload = () => {
@@ -99,6 +108,7 @@ export const BrosweFile = () => {
             >
               <label className=" border-green-700">
                 <input
+                ref={fileInputRef1}
                   type="file"
                   accept=".csv"
                   name="file"
@@ -140,6 +150,7 @@ export const BrosweFile = () => {
 
               <label>
                 <input
+                ref={fileInputRef}
                   type="file"
                   accept=".csv"
                   name="file"
