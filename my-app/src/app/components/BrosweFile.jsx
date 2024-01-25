@@ -149,19 +149,24 @@ export const BrosweFile = () => {
                           rounded py-4 px-2 w-[100%] "
                   multiple
                 />
-                <p className=" mt-5 text-[#707070] text-sm text-center">
+                {
+                  selectedFileName ? "" : 
+                  <p className=" mt-5 text-[#707070] text-sm text-center">
                   {" "}
                   Drop Your excel sheet here or{" "}
                   <span className="text-[#605BFF]"> browse </span>
                 </p>
+                
+                }
               </label>
             </div>
 
             <button
             onClick={handleUpload}
-              className="bg-[#605BFF] py-2 w-[100%] rounded mt-5 flex items-center 
+          
+              className={` ${ selectedFileName ? "bg-[#605BFF]" : "bg-[#605BFF] opacity-60 cursor-not-allowed"}  py-2 w-[100%] rounded mt-5 flex items-center 
                   justify-center gap-5 text-sm text-[#FFFFFF]
-                m-auto"
+                m-auto `}
             >
               <span>
                 <FiUpload />{" "}
@@ -172,7 +177,7 @@ export const BrosweFile = () => {
         </div>
       </div>
 
-      <div className="relative top-40 overflow-x-auto">
+      <div className="relative sm:top-40 overflow-x-auto">
         <h2 className="text-2xl py-4 px-2 font-semibold"> Uploads </h2>
             {
               clickUpload && 
@@ -257,105 +262,3 @@ export const BrosweFile = () => {
     </>
   );
 };
-
-{
-  /* <table className="w-full mt-20 py-2 rounded-lg bg-[#F5F5F5] border-red-600">
-        <thead>
-          <tr>
-            {tableRows.map((rows, index) => (
-              <th
-                key={index}
-                className=" border-gray-400 text-sm text-[#000000] py-2 px-4"
-              >
-                {rows}
-              </th>
-            ))}
-          </tr>
-        </thead>
-
-        <tbody className=" bg-[#ffffff] border-green-600 px-4 py-2">
-          {values.map((subarray, index) => (
-            <tr
-              key={index}
-              className="bg-[#FFFFFF] relative   text-sm font-Figtree text-[#000000] w-[90%] m-auto rounded-lg border-2 border-red-600 px-4 py-4 shadow-lg"
-            >
-              {subarray.slice(0, 3).map((value, subIndex) => (
-                <td key={subIndex} className="py-2 border-green-400">
-                  {value.links ? (
-                    <a href={value} className="text-blue-500 blinking-link">
-                      {value}
-                    </a>
-                  ) : (
-                    <div className="py-4 border-yellow-500">{value}</div>
-                  )}
-                </td>
-              ))}
-
-              <td className="border-gray-400 py-2">
-                <select
-                  onChange={(e) => handleSelectChange(index, e.target.value)}
-                  value={""}
-                  className="w-full py-2 border rounded  px-4 border-gray-600"
-                >
-                  <option value="" disabled hidden>
-                    Select tags
-                  </option>
-                  {subarray[3].split(",").map((value, subIndex) => (
-                    <option
-                      key={subIndex}
-                      value={value}
-                      className="border-2 border-red-600  
-                     rounded-lg
-                    "
-                    >
-                      {value}
-                    </option>
-                  ))}
-                </select>
-              </td>
-
-              
-
-              <td className="Display-container border-red-400 bg-[#FFFFFF] py-2 text-center">
-                {selectedArray[index] &&
-                  selectedArray[index].map((value, subIndex) => (
-                    <div
-                      key={subIndex}
-                      className="inline-block bg-[#605BFF] px-2 py-1 rounded-lg mx-1"
-                    >
-                      <span className="text-white">{value}</span>
-                      <button
-                        onClick={() => handleRemoveOption(index, value)}
-                        className="ml-1 text-white px-2 rounded-full cursor-pointer"
-                      >
-                        X
-                      </button>
-                    </div>
-                  ))}
-              </td>
-
-            </tr>
-          ))}
-        </tbody>
-      </table> */
-}
-
-{
-  /* <td className="border-red-400 bg-[#FFFFFF]  py-2 flex space-x-2">
-                {selectedArray[index] &&
-                  selectedArray[index].map((value, subIndex) => (
-                    <div
-                      key={subIndex}
-                      className="flex items-center justify-center relative left-2 bg-[#605BFF] px-2 py-1 rounded-lg"
-                    >
-                      <span className="text-white">{value}</span>
-                      <button
-                        onClick={() => handleRemoveOption(index, value)}
-                        className="ml-1 text-white px-2 rounded-full cursor-pointer"
-                      >
-                        X
-                      </button>
-                    </div>
-                  ))}
-              </td> */
-}

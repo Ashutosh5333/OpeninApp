@@ -16,9 +16,9 @@ const page = () => {
       </div>
       <MobileNavbar />
 
-      <div className="Admin-container sm:ml-[20%]  border-pink-700 w-[80%]  m-auto  min-h-screen">
+      <div className="Admin-container sm:ml-[20%]  border-pink-700 w-[95%] sm:w-[80%]  m-auto  min-h-screen">
         <div
-          className="RightSide-Container 
+          className="RightSide-Container mt-[15%] sm:mt-0
          border-black w-full px-4 mx-auto    p-2"
         >
           <div
@@ -26,7 +26,7 @@ const page = () => {
            sm:top-0 px-4 py-8  border-red-500 mb-2"
           >
             <div className="flex items-center ">
-              <span className="material-icons text-2xl font-semibold mr-2">
+              <span className="material-icons text-2xl font-semibold mr-2 ">
                 {" "}
                 Upload CSV{" "}
               </span>
