@@ -10,7 +10,7 @@ import {BrosweFile} from "@/app/components/BrosweFile"
 
 const page = () => {
   return (
-    <>
+
       <div
         className="flex  w-[100%] justify-between gap-5
        m-auto border-red-600 h-screen "
@@ -54,7 +54,7 @@ const page = () => {
             
         </div>
       </div>
-    </>
+
   );
 };
 

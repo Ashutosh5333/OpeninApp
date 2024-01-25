@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Papa from "papaparse";
 import { FiUpload } from "react-icons/fi";
-
+import "./a.css"
 export const BrosweFile = () => {
   const [parsedData, setParsedData] = useState([]);
   const [selectedFileName, setSelectedFileName] = useState("");
@@ -167,7 +167,7 @@ export const BrosweFile = () => {
       <div className="relative top-40 overflow-x-auto">
         <h2 className="text-2xl py-4 px-2 font-semibold"> Uploads </h2>
 
-        <table className="w-full px-4 py-2 rounded-lg bg-[#F5F5F5] border-red-600">
+        <table className="w-full border-separate border-spacing-x-0 border-spacing-y-[15px] px-4 py-2 rounded-lg bg-[#F5F5F5] border-red-600">
           <thead>
             <tr>
               {tableRows.map((rows, index) => (
@@ -185,8 +185,8 @@ export const BrosweFile = () => {
             {values.map((subarray, index) => (
               <tr
                 key={index}
-                className="bg-[#FFFFFF] relative mb-4 text-sm font-Figtree text-[#000000] w-[90%] m-auto rounded-lg 
-               border  border-gray-600 px-8 py-3 shadow-lg"
+                className="bg-[rgb(255,255,255)]  relative mb-4 text-sm font-Figtree text-[#000000] w-[90%] m-auto
+               border-2 bordr-red-500 rounded-2xl px-8 py-3 shadow-lg"
               >
                 {subarray.slice(0, 3).map((value, subIndex) => (
                   <td key={subIndex} className="py-2 px-8  border-green-400">
