@@ -38,10 +38,10 @@ const Sidebar = () => {
 
           <div className="flex items-center gap-2 py-2 mb-6">
             <span className="material-icons mr-2">
-              <FaFileUpload className="text-[1.3rem]" />
+              <FaFileUpload className="text-[1.3rem] text-[#605BFF]" />
             </span>
 
-            <span className="text-sm font-medium">Upload </span>
+            <span className="text-sm text-[#605BFF] font-medium">Upload </span>
           </div>
 
           <div className="flex items-center gap-2 py-2 mb-6">
