@@ -4,6 +4,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import Sidebar from "../../components/Sidebar";
 import MobileNavbar from "@/app/components/MobileNavbar";
 import { BrosweFile } from "@/app/components/BrosweFile";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -38,9 +39,11 @@ const page = () => {
               </span>
               <span className="material-icons hidden sm:block">
                 <div className="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center">
-                  <img
+                  <Image
                     src="https://bit.ly/kent-c-dodds"
                     alt="Kent Dodds"
+                     width={40}
+                     height={40}
                     className="rounded-full"
                   />
                 </div>

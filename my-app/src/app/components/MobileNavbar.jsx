@@ -38,7 +38,7 @@ const MobileNavbar = () => {
           <button>
           
           <div className="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center">
-                <img src="https://bit.ly/dan-abramov" alt="dan" className="rounded-full"/>
+                <Image src="https://bit.ly/kent-c-dodds" alt="dan" width={40} height={40} className="rounded-full"/>
         </div>
         
           </button>
