@@ -26,13 +26,12 @@ const Emailcomp = () => {
     if (formData.email === "" || formData.password === "") {
       toast.error("Fill both fields");
     } else {
-      toast.success("Login Successfully");
       router.push("/dashboard")
+      toast.success("Login Successfully");
     }
 
   };
 
-    //  console.log("formdata",formData)
 
   return (
     <>

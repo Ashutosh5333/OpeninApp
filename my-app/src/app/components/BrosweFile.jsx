@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 import Papa from "papaparse";
 import { FiUpload } from "react-icons/fi";
+import toast, { Toaster } from 'react-hot-toast';
 import "./a.css";
 
 
@@ -79,7 +80,10 @@ export const BrosweFile = () => {
   };
 
   const handleUpload = () => {
-    setClickUpload(true);
+     toast.success("Uploading.......")
+     setTimeout(()=>{
+       setClickUpload(true);
+     },1000)
   };
 
   return (
@@ -254,6 +258,7 @@ export const BrosweFile = () => {
           </table>
         )}
       </div>
+      <Toaster/>
     </>
   );
 };

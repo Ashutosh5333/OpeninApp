@@ -39,8 +39,8 @@ const page = () => {
               <span className="material-icons hidden sm:block">
                 <div className="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center">
                   <img
-                    src="https://bit.ly/dan-abramov"
-                    alt="dan"
+                    src="https://bit.ly/kent-c-dodds"
+                    alt="Kent Dodds"
                     className="rounded-full"
                   />
                 </div>
