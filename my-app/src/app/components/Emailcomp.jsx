@@ -1,11 +1,15 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Emailcomp = () => {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -13,11 +17,22 @@ const Emailcomp = () => {
       ...formData,
       [name]: value,
     });
+   
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+       
+    if (formData.email === "" || formData.password === "") {
+      toast.error("Fill both fields");
+    } else {
+      toast.success("Login Successfully");
+      router.push("/dashboard")
+    }
 
+  };
 
+    //  console.log("formdata",formData)
 
   return (
     <>
@@ -30,12 +45,13 @@ const Emailcomp = () => {
             <input
               type="email"
               name="email"
-              className="w-full text-sm px-4 rounded-lg
-             p-2  bg-[#F5F5F5]"
+              className={`w-full text-sm px-4 rounded-lg p-2  bg-[#F5F5F5] `}
               placeholder=" Email Address"
               onChange={handleInputChange}
             />
           </div>
+         
+
           <label htmlFor="password" className="m-1 font-normal   text-sm">
             Password
           </label>
@@ -44,18 +60,17 @@ const Emailcomp = () => {
             <input
               id="password"
               name="password"
-              type={"password"}
+              type="password"
               autoComplete="current-password"
               required
-              className="appearance-none  relative block
-           w-full px-5  bg-[#F5F5F5] text-sm
-              border-none text-black
-                p-2 rounded-lg
-               z-10 "
+              className={`appearance-none  relative block w-full px-5  bg-[#F5F5F5] text-sm
+              border-none text-black p-2 rounded-lg z-10 `}
               placeholder="Password"
               onChange={handleInputChange}
             />
           </div>
+         
+
           <label
             htmlFor="Forget"
             className="m-1 mt-5 py-6 font-semibold text-[#346BD4]  text-sm"
@@ -63,26 +78,19 @@ const Emailcomp = () => {
             Forgot password?
           </label>
           <div
-            onClick={handleSubmit}
-            className={`py-1 px-2 mt-5 
-          bg-[#605BFF]
-       flex items-center justify-center
-        cursor-pointer 
-       border-yellow-600 rounded-md`}
+           onClick={handleSubmit}
+            className={`py-1 px-2 mt-5 bg-[#605BFF] flex items-center justify-center cursor-pointer border-yellow-600 rounded-md`}
           >
             <button
               type="submit"
-         
-              className={`text-white hover:cursor-pointer
-               py-1 px-2 font-semibold text-sm text-center `}
+              className={`text-white hover:cursor-pointer py-1 px-2 font-semibold text-sm text-center`}
             >
-             
-                Sign in
-             
+              Sign in
             </button>
           </div>
         </form>
       </div>
+      <Toaster />
     </>
   );
 };
