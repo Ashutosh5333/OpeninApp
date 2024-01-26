@@ -97,7 +97,7 @@ export default function Home() {
                 className="Sign-box  py-2 px-1  border-black 
               lg:px-4  flex items-center justify-between"
               >
-                <div className="flex items-center px-8 sm:px-2 lg:px-6 p-2 shadow-sm rounded-lg ">
+                <div className="flex items-center px-6 sm:px-2 lg:px-6 p-2 shadow-sm rounded-lg ">
                   <FcGoogle className="text-blue-600 text-xl mr-2" />
                   <span className="text-[#858585] text-[.6rem] sm:text-[.8rem] font-Montserrat">
                     {" "}
@@ -105,7 +105,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="flex items-center px-8 sm:px-2 lg:px-6 shadow-sm rounded-lg p-2">
+                <div className="flex items-center px-6 sm:px-2 lg:px-6 shadow-sm rounded-lg p-2">
                   <GrApple className="text-black text-xl mr-2" />
                   <span className="text-[#858585] text-[.6rem] sm:text-[.8rem] font-Montserrat">
                     {" "}
@@ -117,11 +117,11 @@ export default function Home() {
               <Emailcomp />
 
               <div className="py-5 px-2 flex items-center justify-center border-yellow-600 rounded-md">
-                <div className="flex justify-between gap-2">
+                <div className="flex  flex-col sm:flex-row n gap-2">
                   <h2 className="text-[#858585] text-sm sm:text-sm font-normal">
                     Don't have an account?{" "}
                   </h2>
-                  <h2 className="text-[#605BFF] hover:cursor-pointer text-sm font-normal sm:text-sm ">
+                  <h2 className="text-[#605BFF] text-center hover:cursor-pointer text-sm font-normal sm:text-sm ">
                     {" "}
                     Register here
                   </h2>
