@@ -11,13 +11,22 @@ import {
 import { RxDashboard } from "react-icons/rx";
 import { SiInvoiceninja } from "react-icons/si";
 import { SlCalender } from "react-icons/sl";
+import { useRouter } from "next/navigation";
 
 const MobileNavbar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const router = useRouter()
 
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
+
+
+    const handleHome = () =>{
+       router.push("/")
+    }
+
+
 
   return (
     <div className="fixed z-10 block sm:hidden w-full py-2 px-4   border-red-700 bg-[#ffffff] ">
@@ -27,9 +36,10 @@ const MobileNavbar = () => {
           <button className="text-2xl" onClick={toggleDrawer}>
             &#9776;
           </button>
-          <Image src={"/assets/Logocompany.png"} width={80}
+          <Image  onClick={handleHome} src={"/assets/Logocompany.png"} width={80}
                    height={30} alt="logo"/>
         </div>
+
         <div className="flex items-center">
           <button className="mr-4">
                 <IoMdNotificationsOutline className="text-[1.5rem]" />
