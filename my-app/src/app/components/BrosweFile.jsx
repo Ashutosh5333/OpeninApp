@@ -177,9 +177,9 @@ export const BrosweFile = () => {
                 {tableRows.map((rows, index) => (
                   <th
                     key={index}
-                    className="border-gray-400  text-center text-sm py-2 px-2 sm:text-base"
+                    className="border-gray-400 capitalize text-center text-sm py-2 px-2 sm:text-base"
                   >
-                    {rows}
+                    { index == 0 ? "Sl No." : rows}
                   </th>
                 ))}
               </tr>
