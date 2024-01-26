@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import React from "react";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import Sidebar from "../../components/Sidebar";

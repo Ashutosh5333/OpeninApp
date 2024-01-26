@@ -2,12 +2,10 @@
 import React, { useState } from "react";
 
 const Emailcomp = () => {
-   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
- 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -19,10 +17,7 @@ const Emailcomp = () => {
 
   const handleSubmit = () => {};
 
-  const isFormValid = () => {
-    const { email, password } = formData;
-    return email.trim() !== "" && password.trim() !== "";
-  };
+
 
   return (
     <>
@@ -77,22 +72,13 @@ const Emailcomp = () => {
           >
             <button
               type="submit"
-              disabled={loading}
+         
               className={`text-white hover:cursor-pointer
                py-1 px-2 font-semibold text-sm text-center `}
             >
-              {loading ? (
-                <div className="w-[50%] flex items-center h-[15px] m-auto  ">
-                  <Image
-                    src={`https://s3.us-east-2.amazonaws.com/sikkaplay.com-assets/assets/users/loading.gif`}
-                    alt="loader"
-                    width={200}
-                    height={100}
-                  />
-                </div>
-              ) : (
-                "Sign in"
-              )}
+             
+                Sign in
+             
             </button>
           </div>
         </form>

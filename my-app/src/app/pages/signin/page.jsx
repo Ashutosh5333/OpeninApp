@@ -71,7 +71,7 @@ const page = () => {
           </div>
         </div>
 
-        {/* mobile-container */}
+  
 
         <div className="Leftside-mobile w-[100%] sm:hidden sm:w-1/2 py-2  border-red-600 bg-[#605BFF] bg-cover relative">
           <div className="py-4 w-[90%] border-red-600 m-auto text-start">
