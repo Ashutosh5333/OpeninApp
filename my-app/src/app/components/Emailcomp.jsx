@@ -37,7 +37,7 @@ const Emailcomp = () => {
 
   return (
     <>
-      <div className="w-[100%] sm:w-[90%]  m-auto sm:px-8 sm:py-8  shadow-md rounded-lg ">
+      <div className="w-[100%] sm:w-[90%] px-4 py-4 m-auto sm:px-8 sm:py-8  shadow-md rounded-lg ">
         <form onSubmit={handleSubmit}>
           <label htmlFor="phone" className="m-1 font-normal  text-sm">
             Email address
