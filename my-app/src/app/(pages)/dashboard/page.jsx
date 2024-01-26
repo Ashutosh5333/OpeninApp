@@ -10,7 +10,7 @@ const page = () => {
   return (
     <div className="Box-container  w-[100%] m-auto flex justify-between">
       <div
-        className="SideBar-container  hidden sm:block  py-2 px-2 w-[20%] 
+        className="SideBar-container cursor-pointer  hidden sm:block  py-2 px-2 w-[20%] 
      min-h-screen fixed bg-[#FFFFFF] m-auto shadow-md text-[#9A9AA9] h-screen lg:px-4 "
       >
         <Sidebar />
@@ -33,7 +33,7 @@ const page = () => {
               </span>
             </div>
 
-            <div className="flex  justify-between gap-5  items-center">
+            <div className="flex  cursor-pointer justify-between gap-5  items-center">
               <span className="material-icons hidden sm:block mr-2">
                 <IoMdNotificationsOutline className="text-[1.5rem]" />
               </span>

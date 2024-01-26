@@ -1,4 +1,6 @@
+'use client';
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { AiFillSchedule } from "react-icons/ai";
 import { FaFileUpload } from "react-icons/fa";
@@ -10,18 +12,28 @@ import { RxDashboard } from "react-icons/rx";
 import { SiInvoiceninja } from "react-icons/si";
 import { SlCalender } from "react-icons/sl";
 
+
 const Sidebar = () => {
+   const router = useRouter()
+
+    const handleHome = () =>{
+       router.push("/")
+    }
 
   return (
     <>
-     <div className="px-6 py-4 mb-2">
+     <div 
+      onClick={handleHome}
+     className="px-6 py-4 mb-2">
+       
           <Image
             src={"/assets/Logocompany.png"}
             alt="Logo"
             width={100}
             height={30}
             className="mr-2 inline"
-          />
+            />
+         
         </div>
 
         <div className=" flex flex-col justify-center px-4 py-4 border-red-600">

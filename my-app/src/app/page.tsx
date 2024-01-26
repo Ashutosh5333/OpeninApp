@@ -63,6 +63,8 @@ export default function Home() {
               <BiLogoDiscord className="text-4xl text-[#FFFFFF]" />
             </a>
           </div>
+          
+
         </div>
 
         <div className="Leftside-mobile w-[100%] sm:hidden sm:w-1/2 py-2  border-red-600 bg-[#605BFF] bg-cover relative">
@@ -74,17 +76,9 @@ export default function Home() {
               alt="SignIcon"
               className=" inline-block"
             />
-            {/* <Image
-              src={"/assets/vector.png"}
-              width={40}
-              height={10}
-              alt="ellipse"
-              className="border-black relative right-10 top-[-1px] inline-block"
-            /> */}
+            
           </div>
-          {/* <div className="text-[#FFFFFF] absolute left-24 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <h2>BASE</h2>
-          </div> */}
+         
         </div>
 
         <div className="Rightside  w-[100%]  md:w-[50%]  border-green-600 flex justify-center items-center">
