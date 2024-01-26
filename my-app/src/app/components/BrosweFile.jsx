@@ -194,13 +194,15 @@ export const BrosweFile = () => {
                 >
                   {subarray.slice(0, 3).map((value, subIndex) => (
                     <td key={subIndex} className="py-2 px-8  border-green-400">
-                      {value.links ? (
-                        <a className="text-blue-500 blinking-link">
-                          {value}
-                        </a>
-                      ) : (
+
+                        {
+                          subIndex == 1 ?  <div className="py-4 border-yellow-500 text-blue-700 underline">
+                            <a href={`https://${value}`}>{value}</a>
+                          </div>
+                   :
+                      
                         <div className="py-4 border-yellow-500">{value}</div>
-                      )}
+                      }
                     </td>
                   ))}
 
