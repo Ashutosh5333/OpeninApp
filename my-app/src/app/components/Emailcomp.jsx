@@ -26,12 +26,12 @@ const Emailcomp = () => {
 
   return (
     <>
-      <div className="w-[100%] sm:w-[90%] m-auto sm:px-8 sm:py-8  shadow-lg rounded-lg ">
+      <div className="w-[100%] sm:w-[90%]  m-auto sm:px-8 sm:py-8  shadow-md rounded-lg ">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="phone" className="m-1 font-semibold  text-sm">
+          <label htmlFor="phone" className="m-1 font-normal  text-sm">
             Email address
           </label>
-          <div className="flex justify-between py-1  items-center">
+          <div className="flex mb-2 justify-between py-1  items-center">
             <input
               type="email"
               name="email"
@@ -41,7 +41,7 @@ const Emailcomp = () => {
               onChange={handleInputChange}
             />
           </div>
-          <label htmlFor="password" className="m-1 font-semibold   text-sm">
+          <label htmlFor="password" className="m-1 font-normal   text-sm">
             Password
           </label>
 

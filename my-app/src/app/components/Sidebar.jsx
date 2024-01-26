@@ -14,7 +14,7 @@ const Sidebar = () => {
 
   return (
     <>
-     <div className="px-4 py-4 mb-2">
+     <div className="px-6 py-4 mb-2">
           <Image
             src={"/assets/Logocompany.png"}
             alt="Logo"
@@ -24,7 +24,7 @@ const Sidebar = () => {
           />
         </div>
 
-        <div className=" flex flex-col justify-center px-1 py-4 border-red-600">
+        <div className=" flex flex-col justify-center px-4 py-4 border-red-600">
           <div className="flex items-center gap-2 py-2 mb-6">
             <span className="material-icons mr-2">
               <RxDashboard className="text-[1.3rem]" />

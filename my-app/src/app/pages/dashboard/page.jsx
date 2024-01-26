@@ -7,10 +7,10 @@ import { BrosweFile } from "@/app/components/BrosweFile";
 
 const page = () => {
   return (
-    <div className="Box-container  w-[100%] m-auto flex justify-between border-yellow-600">
+    <div className="Box-container  w-[100%] m-auto flex justify-between">
       <div
-        className="SideBar-container hidden sm:block  py-2 px-2 w-[20%] 
-     min-h-screen fixed  m-auto shadow-md text-[#9A9AA9] h-screen lg:px-4 "
+        className="SideBar-container  hidden sm:block  py-2 px-2 w-[20%] 
+     min-h-screen fixed bg-[#FFFFFF] m-auto shadow-md text-[#9A9AA9] h-screen lg:px-4 "
       >
         <Sidebar />
       </div>

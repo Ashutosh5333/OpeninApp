@@ -15,10 +15,10 @@ const page = () => {
         flex flex-col sm:flex-row"
       >
 
-        <div className="Leftside hidden sm:block w-[100%] h-[1024px] sm:w-1/2  
+        <div className="Leftside hidden sm:block w-[100%] h-screen sm:w-1/2  
         border-red-600 bg-[url('/assets/Leftbackground.svg')]  bg-cover">
 
-          <div className=" py-2 w-[90%] border-red-600 m-auto ">
+          <div className=" py-4 w-[90%] border-red-600 m-auto ">
             <Image
               src={"/assets/SigninIcon.svg"}
               width={80}
@@ -34,12 +34,12 @@ const page = () => {
             />
           </div>
 
-          <h2 className="text-center font-bold relative top-[15%] text-6xl text-[#FFFFFF] ">
+          <h2 className="text-center font-bold relative sm:top-[30%] lg:top-[15%] text-6xl text-[#FFFFFF] ">
             {" "}
             BASE{" "}
           </h2>
 
-          <div className="footer-icons relative top-[40%]  py-2  flex gap-5 justify-center mt-8">
+          <div className="footer-icons relative sm:top-[60%] lg:top-[40%]  py-2  flex gap-5 justify-center mt-8">
             <a
               href="https://github.com/"
               target="_blank"
@@ -96,24 +96,24 @@ const page = () => {
         </div>
 
 
-        <div className="Rightside border-2 w-[100%]  md:w-[50%]  border-green-600 flex justify-center items-center">
+        <div className="Rightside  w-[100%]  md:w-[50%]  border-green-600 flex justify-center items-center">
 
 
           <div className="signin-box w-[95%] sm:w-[100%] lg:w-[80%] py-2 border-green-600 m-auto">
 
-            <div className="w-[100%] md:w-[100%] lg:w-[90%] px-2 py-4  border-red-600 m-auto">
-              <h1 className="text-start p-2 text-xl sm:text-4xl font-semibold ">
+            <div className="w-[100%] md:w-[100%] lg:w-[90%] px-2 py-4 lg:py-4  border-red-600 m-auto">
+              <h1 className="text-start p-2 md:px-4 text-xl sm:text-4xl font-semibold ">
                 {" "}
                 Sign In{" "}
               </h1>
-              <p className="text-start px-2 py-2 text-sm sm:text-base font-normal  ">
+              <p className="text-start px-2 py-2 md:px-4 text-sm sm:text-sm font-normal  ">
                 {" "}
                 Sign in to your account{" "}
               </p>
 
              <div className="Sign-box  py-2 px-2  border-black 
               lg:px-4  flex items-center justify-between">
-                <div className="flex items-center px-4 sm:px-2 lg:px-6 p-2 shadow-md rounded-lg ">
+                <div className="flex items-center px-4 sm:px-2 lg:px-6 p-2 shadow-sm rounded-lg ">
                   <FcGoogle className="text-blue-600 text-xl mr-2" />
                   <span className="text-[#858585] text-[.5rem] sm:text-[.8rem] font-Montserrat">
                     {" "}
@@ -121,7 +121,7 @@ const page = () => {
                   </span>
                 </div>
 
-                <div className="flex items-center px-4 sm:px-2 lg:px-6 shadow-md rounded-lg p-2">
+                <div className="flex items-center px-4 sm:px-2 lg:px-6 shadow-sm rounded-lg p-2">
                   <GrApple className="text-black text-xl mr-2" />
                   <span className="text-[#858585] text-[.5rem] sm:text-[.8rem] font-Montserrat">
                     {" "}
@@ -134,10 +134,10 @@ const page = () => {
 
               <div className="py-5 px-2 flex items-center justify-center border-yellow-600 rounded-md">
                 <div className="flex justify-between gap-2">
-                  <h2 className="text-[#858585] text-sm sm:text-base font-normal">
+                  <h2 className="text-[#858585] text-sm sm:text-sm font-normal">
                     Don't have an account?{" "}
                   </h2>
-                  <h2 className="text-[#605BFF] hover:cursor-pointer text-base font-normal sm:text-base ">
+                  <h2 className="text-[#605BFF] hover:cursor-pointer text-base font-normal sm:text-sm ">
                     {" "}
                     Register here
                   </h2>
