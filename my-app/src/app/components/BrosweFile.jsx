@@ -92,7 +92,7 @@ export const BrosweFile = () => {
         <div className="container-box px-2 py-2 flex flex-col sm:flex-row sm:justify-between border-pink-800">
           <div className="w-[100%]  bg-[#FFFFFF] rounded-md shadow-md px-4 py-4 border-green-700">
             <div
-              className={`border-2 ${" cursor-pointer border-dashed border-[#EBEBEB]"} py-10 mt-5 bg-[#FFFFFF] rounded-lg w-[100%]`}
+              className={`border-2 ${" cursor-pointer border-dashed border-[#EBEBEB]"} py-16 sm:py-20 mt-5 bg-[#FFFFFF] rounded-lg w-[100%]`}
             >
               <label className="border-green-700">
                 <input
