@@ -181,7 +181,7 @@ export const BrosweFile = () => {
                 {tableRows.map((rows, index) => (
                   <th
                     key={index}
-                    className="border-gray-400 capitalize text-center text-sm py-2 px-2 sm:text-base"
+                    className="border-gray-400 capitalize text-center text-[.8rem] py-2 px-2 sm:text-base"
                   >
                     { index == 0 ? "Sl No." : rows}
                   </th>
@@ -200,7 +200,7 @@ export const BrosweFile = () => {
                     <td key={subIndex} className="py-2 px-8  border-green-400">
 
                         {
-                          subIndex == 1 ?  <div className="py-4 border-yellow-500 text-blue-700 underline">
+                          subIndex == 1 ?  <div className="py-4  sm:text-sm border-yellow-500 text-blue-700 underline">
                             <a href={`https://${value}`}>{value}</a>
                           </div>
                    :
@@ -216,9 +216,11 @@ export const BrosweFile = () => {
                         handleSelectChange(index, e.target.value)
                       }
                       value={""}
-                      className="w-full py-2 border rounded px-4 border-gray-600"
+                      className="w-full  py-1 sm:py-2 gap-5 border rounded sm:px-4 border-gray-600"
                     >
-                      <option value="" disabled hidden>
+                      <option value="" disabled hidden
+                      //  className="text-[.8rem]"
+                      >
                         Select tags
                       </option>
                       {subarray[3].split(",").map((value, subIndex) => (
