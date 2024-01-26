@@ -80,7 +80,7 @@ export const BrosweFile = () => {
   };
 
   const handleUpload = () => {
-     toast.success("Uploading.......")
+     toast.success("Uploaded File.......")
      setTimeout(()=>{
        setClickUpload(true);
      },1000)

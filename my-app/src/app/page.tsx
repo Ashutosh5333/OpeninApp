@@ -25,13 +25,7 @@ export default function Home() {
               height={100}
               alt="SignIcon"
             />
-            {/* <Image
-              src={"/assets/vector.png"}
-              width={100}
-              height={10}
-              alt="ellipse"
-              className=" border-black right-2 relative top-[-55px]"
-            /> */}
+           
           </div>
 
           <h2 className="text-center font-bold relative sm:top-[30%] lg:top-[15%] text-6xl text-[#FFFFFF] ">

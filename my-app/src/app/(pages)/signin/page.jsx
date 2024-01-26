@@ -75,25 +75,16 @@ const page = () => {
 
         <div className="Leftside-mobile w-[100%] sm:hidden sm:w-1/2 py-2  border-red-600 bg-[#605BFF] bg-cover relative">
           <div className="py-4 w-[90%] border-red-600 m-auto text-start">
-            <Image
-              src={"/assets/mobilenavlogo.png"}
-              width={100}
+          <Image
+              src={"/assets/MainIcon.svg"}
+              width={300}
               height={100}
               alt="SignIcon"
-              className=" inline-block"
             />
 
-            {/* <Image
-              src={"/assets/vector.png"}
-              width={40}
-              height={10}
-              alt="ellipse"
-              className="border-black relative right-10 top-[-1px] inline-block"
-            /> */}
+           
           </div>
-          {/* <div className="text-[#FFFFFF] absolute left-24 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <h2>BASE</h2>
-          </div> */}
+        
         </div>
 
 
